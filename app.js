@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const chalk = require('chalk');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks'); // populates local variables into a template
 const routes = require('./routes');
@@ -11,10 +10,10 @@ const bodyParser = require('body-parser');
 app.use(morgan('dev'));
 
 // parse application
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 app.use('/', routes);
 app.use(express.static('public'))

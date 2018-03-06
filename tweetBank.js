@@ -43,6 +43,3 @@ for (let i = 0; i < 10; i++) {
 
 add('Richi', 'Hi');
 add('Richi', 'Bye');
-console.log(find({id: 10}));
-
-
